@@ -6,11 +6,11 @@
   <h3 class="py-4 border-bottom border-2 border-dark ">Now Showing</h3>
   @if (Model.Count() > 0)
   {
-    <div class="container pt-4">
-      <div class="row">
+    <div class="container pt-3">
+      <div class="row row-cols-3">
         @foreach (var movie in Model)
         {
-          <div class="col">
+          <div class="col pt-4">
             <img class="w-75" src="@movie.Image" alt="">
             <h5 class="pt-3">@movie.Name</h5>
             <p class="fs-5 text-muted">@movie.NameVie</p>

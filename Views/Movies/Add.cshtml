@@ -1,5 +1,24 @@
 @model IEnumerable<Cinema.Models.Movie>;
 
-<title>Add Movies</title>
+<title>Add Movie</title>
 
-<h1>Add</h1>
+<div class="text-center">
+  <h2 class="py-5">Add Movies</h2>
+  <form method="POST" asp-action="Add">
+    <div class="input-group mb-4">
+      <span class="input-group-text fs-4">Tên Phim</span>
+      <input class="form-control fs-5"autocomplete="off" placeholder="Parasite">
+      <input class="form-control fs-5"autocomplete="off" placeholder="Ký Sinh Trùng">
+    </div>
+    <div class="mb-4">
+      <label class="form-label fs-4">Thể Loại</label>
+      <input class="form-control fs-5"autocomplete="off" placeholder="Giật Gân, Chính Kịch">
+    </div>
+    <div class="mb-4">
+      <label class="form-label fs-4">Image Url</label>
+      <input class="form-control fs-5" autocomplete="off" placeholder="https://image-of-parasite.png">
+    </div>
+    <button type="submit" class="btn btn-lg btn-danger mx-3">Huỷ Bỏ</button>
+    <button type="submit" class="btn btn-lg btn-primary">Thêm Phim</button>
+  </form>
+</div>
