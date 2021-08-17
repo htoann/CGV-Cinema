@@ -1,4 +1,9 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Cinema.Models
 {
@@ -7,6 +12,7 @@ namespace Cinema.Models
 
     [Key]
     public int Id { get; set; }
+    [DisplayName("Tên Phim")]
     public string Name { get; set; }
     public string NameVie { get; set; }
     public string Category { get; set; }
