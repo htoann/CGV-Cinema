@@ -24,6 +24,15 @@ namespace Cinema.Controllers
       return View(objList);
     }
 
+    public IActionResult Detail(int id)
+    {
+      if(id == null || id == 0) {
+        return NotFound();
+      }
+      var obj = _db.Movies.Find(id);
+      return View(obj);
+    }
+
     // GET Add
     public IActionResult Add()
     {

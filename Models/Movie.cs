@@ -12,7 +12,6 @@ namespace Cinema.Models
 
     [Key]
     public int Id { get; set; }
-    [DisplayName("Tên Phim")]
     public string Name { get; set; }
     public string NameVie { get; set; }
     public string Category { get; set; }

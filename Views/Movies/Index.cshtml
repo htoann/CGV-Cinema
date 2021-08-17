@@ -11,7 +11,9 @@
         @foreach (var movie in Model)
         {
           <div class="col pt-4">
-            <img class="w-75" src="@movie.Image" alt="">
+            <a href="movies/detail/@movie.Id">
+              <img class="w-75" src="@movie.Image">
+            </a>
             <h5 class="pt-3">@movie.Name</h5>
             <p class="fs-5 text-muted">@movie.NameVie</p>
             <div>

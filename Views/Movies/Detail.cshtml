@@ -1,0 +1,17 @@
+@model Cinema.Models.Movie
+
+@{  
+   var Movie = ViewData.Model;   
+}
+
+<div class="text-center d-flex align-items-center justify-content-center" style="margin-top: 110px">
+  <img src="@Movie.Image">
+  <div class="ms-5 text-start">
+    <h2 style="font-size:40px" >@Movie.Name</h2>
+    <p style="font-size:25px" >@Movie.NameVie</p>
+    <div style="font-size:20px">
+      <span class="fw-bolder">Thể Loại: </span>
+      <span>@Movie.Category</span>
+    </div>
+  </div>
+</div>
