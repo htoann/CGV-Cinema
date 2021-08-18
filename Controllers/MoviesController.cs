@@ -48,5 +48,35 @@ namespace Cinema.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    // GET Update
+    public IActionResult Update(int id)
+    {
+      if(id == null || id == 0) {
+        return NotFound();
+      }
+      var obj = _db.Movies.Find(id);
+      return View(obj);
+    }
+
+    // POST Update
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Update(Movie obj)
+    {
+      _db.Movies.Update(obj);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    // POST Delete
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(Movie obj)
+    {
+      _db.Movies.Remove(obj);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
